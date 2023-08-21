@@ -1,0 +1,11 @@
+config:
+  indiceJobs:
+    replicas: 1
+    name: indicejobs
+    image: jcardonar/elasticjobs
+  controller:
+    replicas: 1
+    name: controller
+    output_queue: "TO_COMPONENTE2"
+    image: jcardonar/controller 
+    interval: 1

@@ -1,0 +1,9 @@
+elastic:
+  version: 8.6.1
+  replicas: 1
+  name: elastic
+  
+kibana:
+  version: 8.6.1
+  replicas: 1
+  name: elastic

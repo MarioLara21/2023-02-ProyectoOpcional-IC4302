@@ -1,0 +1,9 @@
+dependencies:
+- name: eck-operator
+  repository: https://helm.elastic.co
+  version: 2.6.1
+- name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 11.9.0
+digest: sha256:ba4bf2d5ab75b62ab7d642e95a7c00410009ca1d6adc8f2b1f452457412f16bd
+generated: "2023-08-20T18:35:22.675048044-06:00"
