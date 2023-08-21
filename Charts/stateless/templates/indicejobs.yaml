@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.config.indiceJobs.name }}
+  labels:
+    app: {{ .Values.config.indiceJobs.name }}
+spec:
+  replicas: {{ .Values.config.indiceJobs.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.config.indiceJobs.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.config.indiceJobs.name }}
+    spec:
+      containers:
+      - name: {{ .Values.config.indiceJobs.name }}
+        image: {{ .Values.config.indiceJobs.image }}
+        env:
+          - name: ELASTICSEARCH_HOST
+            value: "10.1.1.128:9200"
+          - name: INDEX_NAME
+            value: "jobs"
