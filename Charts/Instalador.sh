@@ -8,3 +8,4 @@ cd..
 
 helm upgrade --install dependencias dependencias
 helm upgrade --install elastic-search elastic-search
+helm upgrade --install stateless stateless
